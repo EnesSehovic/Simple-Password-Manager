@@ -66,7 +66,7 @@ class Ui_MainWindow(object):
         # You can change it to whatever you want (simple string, encrypted string or hashed string, etc.)
         import os
         userInput = self.lineEdit.text()
-        if userInput == os.environ.get('FAKE_GMAIL_PASSWORD'):
+        if userInput == os.environ.get('ENVIRONMENT_VARIABLE'):
             self.openSecondWindow()
             MainWindow.close()
         else:
