@@ -1,6 +1,4 @@
-import sqlite3, os
-
-os.chdir(r'C:\Users\Unnamed\Desktop\Python\pwdManager')
+import sqlite3
 
 conn = sqlite3.connect('workDB.db')# IF THE DB DOESN'T EXIST IT'LL CREATE A BLANK
 
