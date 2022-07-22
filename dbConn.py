@@ -9,22 +9,15 @@ def checkIfExistsDB(nameOfYourTable):
     conn.commit()
     return(s)
 
-def createTableDB():
-    c.execute('''CREATE TABLE person(
-                id INTEGER PRIMARY KEY,
-                first TEXT NOT NULL,
-                last TEXT NOT NULL,
-                username TEXT NOT NULL,
-                email TEXT NOT NULL,
-                website TEXT NOT NULL,
-                password TEXT NOT NULL)''')
-    conn.commit()
-
-checkIfExistsDB('person')
-if checkIfExistsDB != []:
-    pass
-else:
-    createTableDB()
+c.execute('''CREATE TABLE IF NOT EXISTS person(
+            id INTEGER PRIMARY KEY,
+            first TEXT NOT NULL,
+            last TEXT NOT NULL,
+            username TEXT NOT NULL,
+            email TEXT NOT NULL,
+            website TEXT NOT NULL,
+            password TEXT NOT NULL)''')
+conn.commit()
 
 def getOneWebsiteInfo(webpage):
     s = []
